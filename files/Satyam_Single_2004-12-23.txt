@@ -1,0 +1,13 @@
+
+    First Name: Satyam
+    Last Name: Single
+    Date of Birth: 2004-12-23
+    Sex: Male
+    Height: 6 inches
+    Weight: 150 pounds
+    Contact Number: 8965214659
+    Email: arpan0127.be23@chitkara.edu.in
+    Address: asdsfd
+    Emergency Contact: Satyam
+    Relation: No
+    

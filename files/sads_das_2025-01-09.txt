@@ -1,0 +1,13 @@
+
+    First Name: sads
+    Last Name: das
+    Date of Birth: 2025-01-09
+    Sex: Male
+    Height: 23 inches
+    Weight: 1232 pounds
+    Contact Number: 588,8588528285
+    Email: arpan0127.be23@chitkara.edu.in
+    Address: asdsasdass
+    Emergency Contact: asdasd
+    Relation: asasd
+    

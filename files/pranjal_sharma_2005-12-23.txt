@@ -1,0 +1,13 @@
+
+    First Name: pranjal
+    Last Name: sharma
+    Date of Birth: 2005-12-23
+    Sex: Male
+    Height: 180 inches
+    Weight: 123 pounds
+    Contact Number: 8571897032
+    Email: akshit0104.be23@chitkara.edu.in
+    Address: asdfghjhgfdfg
+    Emergency Contact: Akshit 
+    Relation: myself
+    

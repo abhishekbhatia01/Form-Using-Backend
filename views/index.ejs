@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+   
+    form{
+        display: flex;
+        justify-content: center;
+    }
+    #main {
+        width: 1000px;
+        background-color: #D3F1DF;
+        /* padding: 40px; */
+        position: relative;
+        border-radius: 1%;
+    }
+
+    .personalDetails {
+        display: grid;
+        grid-template-columns: 33.3% 33.3% 33.3%;
+        row-gap: 2rem;
+        padding-left: 20px;
+    }
+
+    .personalDetails2 {
+        padding-top: 1rem;
+        display: grid;
+        grid-template-columns: 33.3% 33.3% 33.3%;
+        row-gap: 1.3rem;
+        padding-left: 20px;
+    }
+
+    .detailContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+    }
+
+    /* #address {
+        width: 96% !important;
+    } */
+
+    input,
+    select {
+        width: 300px;
+        height: 30px;
+        padding: 4px;
+        border-radius: 5px;
+    }
+
+    .radio {
+        width: 15px;
+        margin: 0px;
+    }
+
+    .radioContainer {
+        display: flex;
+        flex-direction: column;
+        padding-left: 20px;
+    }
+
+    .radioButtons {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+    }
+
+    .question {
+        margin-bottom: 6px;
+    }
+
+    .emergencyDetails {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        row-gap: 2rem;
+        padding-left: 20px;
+    }
+
+    .submitContainer {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    h2 {
+        padding-left: 20px;
+    }
+
+    img {
+        height: 100%;
+        /* position: absolute;
+        width: 50%;
+        top: 0px;
+        left: 0px; */
+    }
+
+    .photoContainer {
+        height: 450px;
+        display: flex;
+    }
+
+    #Sex,
+    #Marital_Status {
+        height: 42px;
+    }
+
+    #submit {
+        margin-top: 50px;
+        height: 40px;
+        width: 250px;
+        background-color: #1b3d65;
+        color: white;
+        font-size: 15px;
+    }
+
+    #Heading {
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    @media (max-width:1395px) {
+
+        .personalDetails2,
+        .personalDetails,
+        .emergencyDetails {
+            grid-template-columns: 50% 50% !important;
+        }
+
+        .detailContainer {
+            justify-self: center;
+        }
+
+        .radioContainer {
+            align-items: center;
+        }
+
+        h2 {
+            text-align: center;
+        }
+    }
+
+    @media (max-width:670px) {
+
+        .personalDetails2,
+        .personalDetails,
+        .emergencyDetails {
+            grid-template-columns: 100% !important;
+        }
+
+        .photoContainer {
+            height: 450px;
+            flex-direction: column;
+        }
+
+        img {
+            height: 400px;
+            object-fit: contain;
+        }
+
+    }
+
+    @media (max-width:490px) {
+        img {
+            height: 300px;
+        }
+    }
+    .tasks{
+        margin-top: 50px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        padding-bottom: 20px;
+    }
+    .box p{
+        width: 200px; 
+        height: 100px; 
+        background-color:#1b3d65; 
+        color: white; 
+        border: none; 
+        border-radius: 10px;
+        padding: 5px;
+        padding-top: 10px;
+    }
+    .box a{
+        padding: 7px;
+        color: white;
+        background-color: #1b3d65;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        position: relative;
+    }
+</style>
+
+<body>
+    <form action="create" method="post">
+    <section id="main">
+        <div class="photoContainer">
+            <img src="/medical.65d592a94c9a25.07563121.png" alt="HealthCare">
+            <p id="Heading">New Patient Enrollment <br> Dr.Singhal</p>
+
+        </div>
+        <div class="personalDetails">
+
+            <div class="detailContainer">
+                <label for="patientName">Name</label>
+                <input type="text" id="patientFname" placeholder="First Name" name="fname" required>
+            </div>
+            <div class="detailContainer">
+                <input type="text" id="patientLname" placeholder="Last Name" name="lname">
+            </div>
+            <div class="detailContainer">
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob" name="dob" required >
+            </div>
+            <div class="detailContainer">
+                <label for="Sex">Sex</label>
+                <select name="sex" id="Sex" required>
+                    <option value="Please Select" selected>Please Select</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="N/A">N/A</option>
+                </select>
+            </div>
+            <div class="detailContainer">
+                <label for="height">Height(inches)</label>
+                <input type="number" id="height" name="height" required>
+            </div>
+            <div class="detailContainer">
+                <label for="weight">Weight(pounds)</label>
+                <input type="number" required id="weight" name="weight">
+            </div>
+            <div class="detailContainer">
+                <label for="Marital_Status">Marital Status</label>
+                <select name="title" id="Marital_Status">
+                    <option value="">Please Select</option>
+                    <option value="">Single</option>
+                    <option value="">Married</option>
+                    <option value="">Divorced</option>
+                    <option value="">Legally separated</option>
+                </select>
+            </div>
+        </div>
+        <hr>
+        <div class="personalDetails2">
+
+            <div class="detailContainer">
+                <label for="patientContact">Contact Number :</label>
+                <input type="tel" id="patientContact" placeholder="Contact No" name="contact" required maxlength="10">
+            </div>
+            <div class="detailContainer">
+                <label for="patientMail">E-mail</label>
+                <input type="email" id="patientMail" placeholder=" ex: abcd@gmail.com" name="email">
+            </div>
+           
+            <div class="detailContainer">
+               
+                <label for="zipCode">Postal / Zip Code</label>
+                <input type="number" required id="zipCode" >
+            </div>
+            <div class="detailContainer">
+                <label for="city">City</label>
+                <input type="text" id="city" name="city" required>
+            </div>
+            <div class="detailContainer">
+                <label for="street">Street</label>
+                <input type="text" required id="street">
+            </div>
+            <div class="detailContainer">
+                <label for="state">State</label>
+                <input type="text" required id="state" name="states">
+            </div>
+            <div class="detailContainer">
+               
+                <label for="address">
+                    Address
+                </label>
+                <input type="text" id="address" name="address">
+            </div>
+        </div>
+        <hr>
+        <div class="radioContainer">
+            <p class="question">Taking any medications, currently?</p>
+            <div class="radioButtons">
+                <input type="radio" name="Yes" id="Yes" class="radio" >
+                <label for="Yes">Yes</label>
+            </div>
+
+            <div class="radioButtons">
+                <input type="radio" name="Yes" id="No" class="radio" >
+                <label for="No">No</label>
+            </div>
+        </div>
+        <hr>
+        <h2>In Case Of Emergency:</h2>
+
+        <div class="emergencyDetails">
+            <div class="detailContainer">
+                <label for="emergencyContact">Emergency Contact:</label>
+                <input type="text" required id="emergencyContact" placeholder="First Name" name="emergency_contact">
+            </div>
+            <div class="detailContainer">
+                <input type="text" required placeholder="Last Name" >
+            </div>
+
+            <div class="detailContainer">
+                <label for="relation">Relationship</label>
+                <input type="text" required placeholder="ex: son" name="relation">
+            </div>
+
+            <div class="detailContainer">
+                <label for="">Contact Number</label>
+                <input type="tel" required maxlength="10" name="contat" >
+            </div>
+        </div>
+        <div class="submitContainer" style="margin-bottom: 50px;">
+            <input type="submit" id="submit">
+        </div>
+    </section></form>
+    <div class="tasks">
+        <% if(files && files.length>0){ %>
+           <% files.forEach(function(val){ %>
+            <div class="box">
+                <p><%= val%></p>
+                <a  href="/file/<%= val%>">Read More</a>
+            </div>
+            <% }) %>
+        <% } else{ %>
+            <h3>No Entry Yet</h3>
+        <%}%>
+    
+    <script src="./script.js"></script>
+</body>
+
+</html>
